@@ -1,3 +1,4 @@
+# STILL BRUTE FORCE, TAKES TOO LONG TO GET AN ASNWER
 def find_source(destination, mappings):
     for mapping in mappings:
         dest_start = int(mapping[0])
@@ -75,7 +76,7 @@ with open('input.txt', 'r') as file:
         fertiliser = find_source(water, maps["fertiliser_to_water"])
         soil = find_source(fertiliser, maps["soil_to_fertiliser"])
         seed = find_source(soil, maps["seed_to_soil"])
-        
+
         print("\tseed:", seed)
         for range in seed_ranges:
             if range[0] <= seed < range[0]+range[1]:
